@@ -95,6 +95,7 @@ class LeapMotonListener(Leap.Listener):
 					matrix = Leap.Matrix(x_basis, y_basis, z_basis, origin)
 					inverse=matrix.rigid_inverse()
 					inverse=inverse.to_array_3x3()
+					#inverse=matrix.to_array_3x3()
 					print("*****inverse"+str(inverse))
 					print("*****"+str(matrix))
 					self.write_file('{"nextJoint":')
